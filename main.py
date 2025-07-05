@@ -1,8 +1,17 @@
 import pygame
+from constants import *
 
 
 def main():
-    print("Starting Asteriods!")
+    pygame.init()
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    switch = True
+    while switch:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+        screen.fill(color="black")
+        pygame.display.flip()
 
 
 if __name__ == "__main__":
